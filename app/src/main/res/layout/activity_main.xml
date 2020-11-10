@@ -1,45 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <Button
-        android:id="@+id/btn_birth_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_small"
-        android:layout_marginStart="@dimen/margin_small"
-        android:padding="@dimen/padding_small"
-        android:text="@string/save"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_center"
-        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
-        app:layout_constraintTop_toBottomOf="@+id/tv_child_birth_date" />
-
-    <Button
-        android:id="@+id/btn_child_gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_small"
-        android:layout_marginStart="@dimen/margin_small"
-        android:padding="@dimen/padding_small"
-        android:text="@string/save"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_center"
-        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
-        app:layout_constraintTop_toBottomOf="@+id/tv_child_gender" />
-
-    <Button
-        android:id="@+id/btn_child_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_small"
-        android:layout_marginStart="@dimen/margin_small"
-        android:padding="@dimen/padding_small"
-        android:text="@string/save"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_center"
-        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
-        app:layout_constraintTop_toBottomOf="@+id/tv_child_name" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_left"
@@ -63,11 +26,18 @@
         app:layout_constraintGuide_percent="0.97" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_horizontal"
+        android:id="@+id/guideline_horizontal_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99" />
 
     <TextView
         android:id="@+id/tv_email"
@@ -76,20 +46,8 @@
         android:layout_margin="@dimen/margin_small"
         android:padding="@dimen/padding_small"
         android:text="@string/set_email"
-        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left" />
-
-    <Button
-        android:id="@+id/btn_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_small"
-        android:layout_marginStart="@dimen/margin_small"
-        android:padding="@dimen/padding_small"
-        android:text="@string/save"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_center"
-        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
-        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_top" />
 
     <EditText
         android:id="@+id/et_email"
@@ -98,8 +56,20 @@
         android:layout_margin="@dimen/margin_small"
         android:layout_marginTop="8dp"
         android:padding="@dimen/padding_small"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
         app:layout_constraintEnd_toStartOf="@id/guideline_vertical_center"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+    <Button
+        android:id="@+id/btn_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/save"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_center"
         app:layout_constraintTop_toBottomOf="@+id/tv_email" />
 
     <TextView
@@ -118,31 +88,23 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
-        android:padding="@dimen/padding_small"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
-        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_center"
-        app:layout_constraintTop_toBottomOf="@+id/tv_child_birth_date" />
-
-    <TextView
-        android:id="@+id/tv_child_birth_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_small"
-        android:padding="@dimen/padding_small"
-        android:text="@string/set_birth_date"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
-        app:layout_constraintTop_toBottomOf="@+id/et_child_birth_date" />
-
-    <EditText
-        android:id="@+id/et_child_birth_date"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_small"
         android:layout_marginTop="8dp"
         android:padding="@dimen/padding_small"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
         app:layout_constraintEnd_toStartOf="@id/guideline_vertical_center"
-        app:layout_constraintTop_toBottomOf="@+id/tv_child_gender" />
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_child_name" />
+
+    <Button
+        android:id="@+id/btn_child_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/save"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_child_name" />
 
     <TextView
         android:id="@+id/tv_child_gender"
@@ -153,28 +115,91 @@
         android:padding="@dimen/padding_small"
         android:text="@string/set_child_gender"
         app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
-        app:layout_constraintTop_toBottomOf="@+id/et_child_gender" />
+        app:layout_constraintTop_toBottomOf="@+id/et_child_name" />
 
     <EditText
         android:id="@+id/et_child_gender"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
-        android:layout_marginTop="136dp"
         android:padding="@dimen/padding_small"
-        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
         app:layout_constraintEnd_toStartOf="@id/guideline_vertical_center"
-        app:layout_constraintTop_toBottomOf="@+id/tv_child_name" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_child_gender" />
+
+    <Button
+        android:id="@+id/btn_child_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/save"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_child_gender" />
 
     <TextView
-        android:id="@+id/tv_how_to_hide"
+        android:id="@+id/tv_child_birth_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/set_birth_date"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/et_child_gender" />
+
+    <EditText
+        android:id="@+id/et_child_birth_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_big"
+        android:layout_margin="@dimen/margin_small"
         android:padding="@dimen/padding_small"
-        android:text="@string/how_to_hide"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_center"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_child_birth_date" />
+
+    <Button
+        android:id="@+id/btn_birth_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/save"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_child_birth_date" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_small"
+        android:fillViewport="true"
+        android:padding="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_bottom"
         app:layout_constraintEnd_toEndOf="@id/guideline_vertical_right"
         app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
-        app:layout_constraintTop_toBottomOf="@id/et_child_name" />
+        app:layout_constraintTop_toBottomOf="@+id/et_child_birth_date">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_how_to_hide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_big"
+                android:isScrollContainer="true"
+                android:text="@string/how_to_hide"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_bottom" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
