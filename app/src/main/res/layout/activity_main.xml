@@ -5,6 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/btn_birth_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/save"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_child_birth_date" />
+
+    <Button
+        android:id="@+id/btn_child_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/save"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_child_gender" />
+
+    <Button
+        android:id="@+id/btn_child_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/save"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_child_name" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_left"
         android:layout_width="wrap_content"
@@ -36,14 +66,25 @@
         app:layout_constraintTop_toBottomOf="@id/guideline_horizontal"
         app:layout_constraintStart_toEndOf="@id/guideline_vertical_left" />
 
+    <Button
+        android:id="@+id/btn_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/save"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
     <EditText
         android:id="@+id/et_email"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
         android:layout_marginTop="8dp"
         android:padding="@dimen/padding_small"
         app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
         app:layout_constraintTop_toBottomOf="@+id/tv_email" />
 
     <TextView
@@ -59,11 +100,12 @@
 
     <EditText
         android:id="@+id/et_child_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
         android:padding="@dimen/padding_small"
         app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
         app:layout_constraintTop_toBottomOf="@+id/tv_child_birth_date" />
 
     <TextView
@@ -78,12 +120,13 @@
 
     <EditText
         android:id="@+id/et_child_birth_date"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
         android:layout_marginTop="8dp"
         android:padding="@dimen/padding_small"
         app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
         app:layout_constraintTop_toBottomOf="@+id/tv_child_gender" />
 
     <TextView
@@ -99,12 +142,13 @@
 
     <EditText
         android:id="@+id/et_child_gender"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
         android:layout_marginTop="136dp"
         android:padding="@dimen/padding_small"
         app:layout_constraintStart_toEndOf="@id/guideline_vertical_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_right"
         app:layout_constraintTop_toBottomOf="@+id/tv_child_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

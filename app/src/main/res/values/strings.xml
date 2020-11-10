@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Screentracking</string>
+    <string name="app_name">ScreenTracking</string>
     <string name="set_birth_date">дата рождения ребенка</string>
     <string name="set_child_gender">пол ребенка</string>
     <string name="set_child_name">имя ребенка</string>
     <string name="set_email">укажите вашу электронную почту</string>
+    <string name="save">сохранить</string>
 </resources>
